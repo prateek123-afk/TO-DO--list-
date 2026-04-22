@@ -1,0 +1,163 @@
+/* Body Background - Piche ka dark Breaking Bad theme */
+body {
+  margin: 0;
+  padding: 0;
+  background: #05100c;
+  /* Bahut deep dark green-black */
+  font-family: 'Impact', 'Arial Black', sans-serif;
+  min-height: 100vh;
+}
+
+/* App Container */
+.app {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(10, 20, 15, 0.95);
+  /* Semi-transparent dark panel */
+  color: #e0e0e0;
+  border: 6px solid #1f6032;
+  border-radius: 12px;
+  box-shadow: 0 0 50px rgba(31, 96, 50, 0.8),
+    inset 0 0 80px rgba(199, 197, 27, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle chemical/lab glow behind everything */
+.app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 20%, rgba(31, 96, 50, 0.25) 0%,
+      rgba(199, 197, 27, 0.08) 40%,
+      transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+h1 {
+  color: #c7c51b;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-shadow: 4px 4px 0 #000,
+    -3px -3px 0 #000,
+    3px -3px 0 #000,
+    -3px 3px 0 #000;
+  font-size: 3.2rem;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
+}
+
+.todo-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 15px;
+  font-size: 17px;
+  background: #0f241a;
+  color: #e0e0e0;
+  border: 3px solid #29773e;
+  border-radius: 8px;
+  outline: none;
+}
+
+.todo-input:focus {
+  border-color: #c7c51b;
+  box-shadow: 0 0 15px #c7c51b;
+}
+
+.add-btn {
+  padding: 15px 32px;
+  background: #1f6032;
+  color: white;
+  border: 3px solid #c7c51b;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  position: relative;
+  z-index: 2;
+}
+
+.add-btn:hover {
+  background: #29773e;
+  transform: scale(1.06);
+}
+
+.todo-list {
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #112b1a;
+  padding: 17px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 2px solid #1f6032;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.65);
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.todo-item:hover {
+  border-color: #c7c51b;
+  transform: translateX(10px);
+}
+
+.todo-item.completed {
+  opacity: 0.75;
+  text-decoration: line-through;
+  background: #0a1f16;
+  border-color: #31553b;
+}
+
+.todo-text {
+  flex: 1;
+  text-align: left;
+  font-size: 19px;
+}
+
+.delete-btn {
+  background: #722018;
+  color: white;
+  border: 2px solid #c34532;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.delete-btn:hover {
+  background: #9c2a1f;
+  border-color: #e9d71b;
+}
+
+.empty {
+  color: #8ab89a;
+  font-style: italic;
+  font-size: 18px;
+  margin-top: 60px;
+  position: relative;
+  z-index: 2;
+}
